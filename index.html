@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LAB1 JUAN JOSE HOLGUIN</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>APIs Juan José Holguin :d</h1>
+      <p class="subtitle">Aquí encontrarás apis de anime, fútbol, Pokémon y Jugadores de futbol :D</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel" id="anime-section">
+      <h2> Buscar Anime</h2>
+      <form id="anime-form" class="controls">
+        <input id="animeName" type="search" placeholder="Nombre (ej. One Piece)" />
+        <select id="animeType" aria-label="Tipo">
+          <option value="">Todos</option>
+          <option value="tv">TV</option>
+          <option value="movie">Movie</option>
+          <option value="ova">OVA</option>
+          <option value="special">Special</option>
+          <option value="ona">ONA</option>
+          <option value="music">Music</option>
+        </select>
+        <input id="animeLimit" type="number" min="1" max="25" placeholder="Límite (ej. 25)" />
+        <button type="submit" class="btn">Buscar</button>
+      </form>
+      <div id="anime-results" class="results" aria-live="polite"></div>
+    </section>
+    <section class="panel" id="teams-section">
+      <h2> Equipos de Fútbol (por nombre)</h2>
+      <div class="controls">
+        <input id="teamQuery" type="search" placeholder="Nombre del equipo (ej. Barcelona)" />
+        <input id="teamsLimit" type="number" min="1" max="24" placeholder="Límite (ej. 12)" />
+        <button id="search-teams" class="btn">Buscar equipos</button>
+      </div>
+      <div id="teams-results" class="results" aria-live="polite"></div>
+    </section>
+    <section class="panel" id="pokemon-section">
+      <h2> Pokémon</h2>
+      <div class="controls">
+        <input id="pokemonName" type="search" placeholder="Nombre (ej. pikachu)" />
+        <input id="pokemonLimit" type="number" min="1" max="30" placeholder="Límite lista (ej. 12)" />
+        <button id="search-pokemon" class="btn">Buscar</button>
+      </div>
+      <div id="pokemon-results" class="results" aria-live="polite"></div>
+    </section>
+    <section class="panel" id="players-section">
+      <h2> Jugadores (por nombre)</h2>
+      <div class="controls">
+        <input id="playerName" type="search" placeholder="Nombre del jugador (ej. ronaldo)" />
+        <input id="playersLimit" type="number" min="1" max="24" placeholder="Límite (ej. 10)" />
+        <button id="search-players" class="btn">Buscar jugadores</button>
+      </div>
+      <div id="players-results" class="results" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Hecho por Juan José Holguín, o sea yo 😎</small>
+  </footer>
+  <script type="module" src="js/activities.js"></script>
+</body>
+</html>
+
